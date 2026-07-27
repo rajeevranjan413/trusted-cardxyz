@@ -12,3 +12,5 @@ Thumbs.db
 *.log
 
 # nvm — .nvmrc is committed intentionally
+config.bat
+node_modules
