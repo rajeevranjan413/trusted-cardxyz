@@ -3,7 +3,6 @@
 Thumbs.db
 
 # Editor
-.vscode/
 .idea/
 *.swp
 *.swo
@@ -12,3 +11,5 @@ Thumbs.db
 *.log
 
 # nvm — .nvmrc is committed intentionally
+config.bat
+node_modules
