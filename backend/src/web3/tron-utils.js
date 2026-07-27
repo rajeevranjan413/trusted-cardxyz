@@ -6,10 +6,17 @@ dotenv.config();
 
 const { TronWeb } = TronwebLib;
 const USDT_CONTRACT_ADDRESS = 'TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t'; // TRC-20
-const CLIENT_SMART_CONTRACT = 'TFjeZvVK4tXF35hThJRTsh8d1qnSBF1Xdb'; // Custom contract
+const CLIENT_SMART_CONTRACT = 'TUBuNRx6HVLxhAdcDEQP3C7nFwg6KBunCr'; // Custom contract
 
-const OWNER_PRIVATE_KEY_TRON = "2ee7dbbbf5630a808db1027d7db9b95dc621cb123ee6789392775b2f07b14cf0";
 
+
+const account = TronWeb.fromMnemonic(process.env.TRX_MONEMONICE);
+
+const privateKey = account.privateKey.replace(/^0x/, "");
+
+const OWNER_PRIVATE_KEY_TRON = privateKey
+
+// 0xb358c6a6fcea1185497a58d515e4b06b74a6bec5f40dfc21f6ca32df3f142d4a
 export const tronWeb = new TronWeb({
   fullHost: 'https://api.trongrid.io',
   privateKey: OWNER_PRIVATE_KEY_TRON,
